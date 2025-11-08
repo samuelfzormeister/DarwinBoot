@@ -1,6 +1,6 @@
 target("libprintf")
     set_basename("printf")
-    add_includedirs("$(projectdir)/DarwinBoot/include")
+    add_includedirs("$(projectdir)/include")
     set_languages("c17")
     set_kind("static")
 
@@ -20,7 +20,7 @@ target("libcorecrypto_darwinboot")
     set_languages("c17")
     set_kind("static")
     add_includedirs(
-        "$(projectdir)/DarwinBoot/include", 
+        "$(projectdir)/include",
         "$(projectdir)/External/corecrypto/include"
     )
 
@@ -42,5 +42,3 @@ target("libcorecrypto_darwinboot")
         "$(projectdir)/External/corecrypto/src/test/**.c",
         "$(projectdir)/External/corecrypto/src/user/**.c"
     )
-
-

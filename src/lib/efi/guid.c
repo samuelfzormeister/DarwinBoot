@@ -1,0 +1,54 @@
+// Copyright (C) 2025 Samuel Zormeister, All rights reserved. Licensed under the BSD-3 Clause License.
+
+#include <platform/efi/types/guid.h>
+
+#include <platform/efi/protocols.h>
+efi_guid_t gEfiBlockIoProtocolGuid = EFI_BLOCK_IO_PROTOCOL_GUID;
+efi_guid_t gEfiBlockIo2ProtocolGuid = EFI_BLOCK_IO2_PROTOCOL_GUID;
+
+efi_guid_t gEfiComponentName2ProtocolGuid = EFI_COMPONENT_NAME2_PROTOCOL_GUID;
+
+efi_guid_t gEfiDevicePathProtocolGuid = EFI_DEVICE_PATH_PROTOCOL_GUID;
+
+efi_guid_t gEfiDevicePathToTextProtocolGuid = EFI_DEVICE_PATH_TO_TEXT_PROTOCOL_GUID;
+
+efi_guid_t gEfiDevicePathUtilitiesProtocolGuid = EFI_DEVICE_PATH_UTILITIES_PROTOCOL_GUID;
+
+efi_guid_t gEfiDiskIoProtocolGuid = EFI_BLOCK_IO_PROTOCOL_GUID;
+efi_guid_t gEfiDiskIo2ProtocolGuid = EFI_BLOCK_IO2_PROTOCOL_GUID;
+
+efi_guid_t gEfiDriverBindingProtocolGuid = EFI_DRIVER_BINDING_PROTOCOL_GUID;
+
+efi_guid_t gEfiGraphicsOutputProtocolGuid = EFI_GRAPHICS_OUTPUT_PROTOCOL_GUID;
+
+efi_guid_t gEfiHashServiceBindingProtocolGuid = EFI_HASH_SERVICE_BINDING_PROTOCOL_GUID;
+efi_guid_t gEfiHashProtocolGuid = EFI_HASH_PROTOCOL_GUID;
+efi_guid_t gEfiHash2ServiceBindingProtocolGuid = EFI_HASH2_SERVICE_BINDING_PROTOCOL_GUID;
+efi_guid_t gEfiHash2ProtocolGuid = EFI_HASH2_PROTOCOL_GUID;
+efi_guid_t gEfiHashAlgorithmSha1Guid = EFI_HASH_ALGORITHM_SHA1_GUID;
+efi_guid_t gEfiHashAlgorithmSha224Guid = EFI_HASH_ALGORITHM_SHA224_GUID;
+efi_guid_t gEfiHashAlgorithmSha256Guid = EFI_HASH_ALGORITHM_SHA256_GUID;
+efi_guid_t gEfiHashAlgorithmSha384Guid = EFI_HASH_ALGORITHM_SHA384_GUID;
+efi_guid_t gEfiHashAlgorithmSha512Guid = EFI_HASH_ALGORITHM_SHA512_GUID;
+efi_guid_t gEfiHashAlgorithmMd5Guid = EFI_HASH_ALGORITHM_MD5_GUID;
+
+efi_guid_t gEfiLoadedImageProtocolGuid = EFI_LOADED_IMAGE_PROTOCOL_GUID;
+efi_guid_t gEfiLoadedImageDevicePathProtocolGuid = EFI_LOADED_IMAGE_DEVICE_PATH_PROTOCOL_GUID;
+
+efi_guid_t gEfiLoadFileProtocolGuid = EFI_LOAD_FILE_PROTOCOL_GUID;
+efi_guid_t gEfiLoadFile2ProtocolGuid = EFI_LOAD_FILE2_PROTOCOL_GUID;
+
+efi_guid_t gEfiMpServicesProtocolGuid = EFI_MP_SERVICES_PROTOCOL_GUID;
+
+efi_guid_t gEfiPartitionInfoProtocolGuid = EFI_PARTITION_INFO_PROTOCOL_GUID;
+
+efi_guid_t gEfiRamDiskProtocolGuid = EFI_RAM_DISK_PROTOCOL_GUID;
+
+efi_guid_t gEfiRngProtocolGuid = EFI_RNG_PROTOCOL_GUID;
+
+efi_guid_t gEfiSimpleFileSystemProtocolGuid = EFI_SIMPLE_FILE_SYSTEM_PROTOCOL_GUID;
+
+efi_guid_t gEfiSimpleTextInputProtocolGuid = EFI_SIMPLE_TEXT_INPUT_PROTOCOL_GUID;
+efi_guid_t gEfiSimpleTextOutputProtocolGuid = EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL_GUID;
+
+efi_guid_t gEfiTimestampProtocolGuid = EFI_TIMESTAMP_PROTOCOL_GUID;

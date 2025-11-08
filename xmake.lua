@@ -10,7 +10,9 @@ if is_plat("uefi") then
 
     set_toolchains("uefi")
 
-    includes("External/libs.lua")
-    includes("targets/UEFI/*.lua")
-
 end
+
+includes("External/libs.lua")
+includes("src/platform/platform.lua")
+includes("src/lib/config.lua")
+includes("src/apps/config.lua")

@@ -1,0 +1,12 @@
+[default_config]
+assembler = "gas"
+instruction_set = "x86/x86-64"
+
+[[project]]
+path = "src/lib/xnuloader/arm64"
+assembler = "gas"
+instruction_set = "arm64"
+
+
+[default_config.opts]
+compiler = "clang"
