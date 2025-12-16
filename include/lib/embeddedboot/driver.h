@@ -18,6 +18,7 @@ typedef struct _eb_driver_matching_s {
 
 typedef struct _driver_s {
     eb_driver_matching_t match;
+    const char *name;
 } eb_driver_t;
 
 eb_driver_t *eb_driver_create_for_device(eb_device_t *dev);

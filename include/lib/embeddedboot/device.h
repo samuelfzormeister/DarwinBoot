@@ -10,26 +10,25 @@
 
 __BEGIN_DECLS
 
-/*
- * built for MMIO devices.
- */
-
 typedef struct _eb_device_s eb_device_t;
 
-typedef struct _eb_device_memory_ops_s {
+struct _eb_device_s {
+    const char *name;
+    eb_memory_range_t *memory;
+
     uint8_t (*read8)(eb_device_t *dev, uint32_t offset);
     uint16_t (*read16)(eb_device_t *dev, uint32_t offset);
     uint32_t (*read32)(eb_device_t *dev, uint32_t offset);
     void (*write8)(eb_device_t *dev, uint32_t offset, uint8_t value);
     void (*write16)(eb_device_t *dev, uint32_t offset, uint16_t value);
     void (*write32)(eb_device_t *dev, uint32_t offset, uint32_t value);
-} eb_device_memory_ops_t;
-
-struct _eb_device_s {
-    const char *name;
-    eb_memory_range_t *memory;
-    eb_device_memory_ops_t memory_ops;
 };
+
+void eb_device_construct_mmio(eb_device_t *dev, eb_memory_range_t *mem);
+
+uint32_t eb_device_read32(eb_device_t *dev, uint32_t offset);
+uint16_t eb_device_read16(eb_device_t *dev, uint32_t offset);
+uint8_t eb_device_read8(eb_device_t *dev, uint32_t offset);
 
 __END_DECLS
 

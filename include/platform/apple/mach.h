@@ -90,6 +90,23 @@ struct mach_header_64 {
 typedef struct mach_header_64 mach_header_64;
 typedef mach_header_64 MachHeader64;
 
+#define MH_MAGIC_FAT 0xCAFEBABE
+#define MH_CIGAM_FAT 0xBEBAFECA
+
+struct mach_fat_header {
+    uint32_t magic;
+    uint32_t nslices;
+    struct {
+        cpu_type_t cpu_type;
+        cpu_subtype_t cpu_subtype;
+        uint32_t slice_offset;
+        uint32_t slice_size;
+        uint32_t sect_alignment;
+    } slices[] __counted_by(nslices);
+};
+
+typedef struct mach_fat_header mach_fat_header;
+
 /* filetype field */
 enum {
     MH_OBJECT = 1,

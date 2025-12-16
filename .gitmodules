@@ -1,9 +1,12 @@
-[submodule "External/cctools"]
-	path = External/cctools
-	url = https://github.com/apple-oss-distributions/cctools
-[submodule "External/printf"]
-	path = External/printf
+[submodule "thirdparty/printf"]
+	path = thirdparty/printf
 	url = https://github.com/mpaland/printf.git
-[submodule "External/corecrypto"]
-	path = External/corecrypto
+[submodule "thirdparty/corecrypto"]
+	path = thirdparty/corecrypto
 	url = https://github.com/Zormeister/corecrypto.git
+[submodule "thirdparty/cctools"]
+	path = thirdparty/cctools
+	url = https://github.com/apple-oss-distributions/cctools.git
+[submodule "thirdparty/lzfse"]
+	path = thirdparty/lzfse
+	url = https://github.com/lzfse/lzfse.git

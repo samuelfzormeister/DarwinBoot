@@ -1,6 +1,6 @@
 // Copyright (C) 2025 Samuel Zormeister, All rights reserved. Licensed under the BSD-3 Clause License.
 
-#include <lib/cms/cms.h>
+#include <lib/cms.h>
 #include <panic.h>
 #include <stdio.h>
 
@@ -11,18 +11,13 @@ struct _cms_memory_desc_s {
     size_t size;
     physical_address_t phys;
     virtual_address_t virt;
-    cms_memory_region_t region;
+    cms_mem_region_t region;
     cms_memory_desc_t next;
 };
 
-static const char *cms_region_names[cms_memory_region_max] = {
-    "invalid",
+static const char *cms_region_names[CMS_MEM_REGION_MAX] = {
+    "boot",
     "kernel",
-    "boot args",
-    "device tree",
-    "ramdisk",
-    "images",
-    "kext dungeon"
 };
 
 #define cms_debug(fmt, args...) \
@@ -31,7 +26,7 @@ static const char *cms_region_names[cms_memory_region_max] = {
 #define cms_panic(fmt, args ...) \
     panic("[cms][%s]: " fmt, (__func__+4), ##args); \
 
-static cms_memory_desc_t cms_regions[cms_memory_region_max];
+static cms_memory_desc_t cms_regions[CMS_MEM_REGION_MAX];
 static const cms_init_data_t *cms_callbacks;
 
 #define malloc(size) cms_callbacks->malloc(size)
@@ -41,7 +36,7 @@ static struct _cms_memory_desc_s cms_root_desc;
 
 static cms_memory_desc_t cms_last_desc;
 
-static cms_state_t cms_state = cms_state_uninitialised;
+static cms_state_t cms_state = CMS_STATE_UNINITIALISED;
 
 cms_state_t cms_get_current_state(void)
 {
@@ -50,7 +45,7 @@ cms_state_t cms_get_current_state(void)
 
 inline bool cms_is_initialized()
 {
-    if (cms_state == cms_state_active) {
+    if (cms_state == CMS_STATE_ACTIVE) {
         return true;
     } else {
         return false;
@@ -70,7 +65,7 @@ bool cms_initialize(const cms_init_data_t *callbacks)
 
     cms_callbacks = callbacks;
 
-    cms_state = cms_state_active;
+    cms_state = CMS_STATE_ACTIVE;
 
     cms_last_desc = &cms_root_desc;
 

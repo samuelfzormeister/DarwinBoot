@@ -19,7 +19,7 @@ struct {
     uint8_t platform_firmware_vers_major; /* 2.4+  from here */
     uint8_t platform_firmware_vers_minor;
     uint8_t ec_fw_version_major;
-    uint8_T ec_fw_version_minor;
+    uint8_t ec_fw_version_minor;
     uint16_t extended_rom_size; /* bits 0 - 13 are the size, bits 14 and 15 are unit indicators, 3.1+ */
 } PACKED typedef smbios_firmware_info_t;
 

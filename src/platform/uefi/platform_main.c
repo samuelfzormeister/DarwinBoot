@@ -1,9 +1,9 @@
-// Copyright (C) 2025 Zormeister, All rights reserved. Licensed under the BSD-3 Clause License.
+// Copyright (C) 2025 Samuel Zormeister, All rights reserved. Licensed under the BSD-3 Clause License.
 
 #include <lib/platform.h>
-#include <lib/efi/efi.h>
+#include <lib/efi.h>
 #include <lib/pal/pal.h>
-#include <lib/sb/sb.h>
+#include <lib/secureboot.h>
 
 #define DEFAULT_CPID_AA64   0xAA64 // aarch64
 #define DEFAULT_CPID_X86_64 0x8664 // x86-64

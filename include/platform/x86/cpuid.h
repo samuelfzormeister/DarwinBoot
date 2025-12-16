@@ -52,4 +52,6 @@ inline void cpuid_leaf(uint32_t leaf, cpuid_reg_t reg)
     );
 }
 
+void x86_set_gdt(void *p);
+
 #endif /* __PLATFORM_X86_CPUID_H__ */

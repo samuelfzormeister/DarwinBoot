@@ -4,6 +4,7 @@
 #define __PLATFORM_SMBIOS_TYPES_ENTRYPOINT_H__
 
 #include <stdint.h>
+#include <lib/types.h>
 
 #define SMBIOS_ANCHOR_64 "_SM3_"
 #define SMBIOS_ANCHOR_32 "_SM_"
@@ -21,7 +22,7 @@ typedef struct {
     uint8_t formatted[5];
     uint8_t interm_anchor[5];
     uint8_t interm_checksum;
-    uin16_t struct_table_length;
+    uint16_t struct_table_length;
     uint32_t struct_table_addr;
     uint8_t bcd_rev;
 } PACKED smbios_entry_point_32_t;

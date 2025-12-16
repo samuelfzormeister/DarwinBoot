@@ -4,7 +4,7 @@ target("libplatform")
     set_languages("c17")
     add_includedirs("$(projectdir)/include")
 
-    add_deps("libc", "libefi", "libprintf", "libsb")
+    add_deps("libc", "libefi", "libprintf", "libsb", "libpanic")
 
     add_files("common/*.c")
 

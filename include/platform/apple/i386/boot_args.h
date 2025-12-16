@@ -3,7 +3,7 @@
 #ifndef __PLATFORM_APPLE_I386_BOOTARGS_H__
 #define __PLATFORM_APPLE_I386_BOOTARGS_H__
 
-#include <stdint.h>
+#include <lib/types.h>
 
 #define XNU_CURRENT_ARGS_VERSION  2
 #define XNU_CURRENT_ARGS_REVISION 1
@@ -49,7 +49,7 @@ struct {
 #define BOOT_ARGS_FLAGS_LOGINUI           0x00000080 /* filevault? */
 #define BOOT_ARGS_FLAGS_INSTALLUI         0x00000100
 
-struct {
+typedef struct __packed {
     uint16_t revision;
     uint16_t version;
     uint8_t efi_mode;                           /* 32 for IA32 EFI, 64 for X64 EFI */
@@ -177,7 +177,7 @@ struct {
     uint64_t bs_arv_manifest_base;
     uint64_t bs_arv_manifest_size;
     uint32_t reserved[692];
-} typedef xnu_boot_args_t;
+} xnu_boot_args_t;
 
 /* do i need to BootServices->SetVirtualAddressMap() before booting XNU? */
 /* does it expect me to have switched to Virtual Memory before kernel load? */

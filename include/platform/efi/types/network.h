@@ -14,7 +14,7 @@ struct {
 } typedef efi_ipv4_address_t;
 
 struct {
-    uint8_t Address[16];
+    uint8_t address[16];
 } typedef efi_ipv6_address_t;
 
 union {

@@ -42,13 +42,21 @@ typedef enum {
     EB_MEMORY_RANGE_TYPE_BUS,
 } eb_memory_range_type_t;
 
+enum {
+    EB_MEMORY_ATTRIBUTE_R = (1 << 0),
+    EB_MEMORY_ATTRIBUTE_W = (1 << 1),
+    EB_MEMORY_ATTRIBUTE_X = (1 << 2),
+};
+
 typedef struct _eb_memory_range_s {
     eb_address_t        start;
     uint32_t            length;
     eb_memory_debug_info_t debug_info;
 } eb_memory_range_t;
 
-eb_result_t init_malloc(eb_memory_range_t *range);
+eb_result_t eb_memory_init(eb_memory_range_t *initial_range);
+
+eb_result_t eb_memory_map(eb_address_t addr, size_t length);
 
 __END_DECLS
 

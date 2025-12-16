@@ -1,6 +1,6 @@
 // Copyright (C) 2025 Samuel Zormeister, All rights reserved. Licensed under the BSD-3 Clause License.
 
-#include <lib/cms/cms.h>
+#include <lib/cms.h>
 #include <stdlib.h>
 #include "stdlib_internal.h"
 

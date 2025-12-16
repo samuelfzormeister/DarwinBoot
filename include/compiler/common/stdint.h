@@ -39,4 +39,7 @@ typedef __UINT32_TYPE__ uint32_t;
 typedef unsigned int uint32_t;
 #endif
 
+typedef uint8_t u_int8_t;
+typedef uint32_t u_int32_t;
+
 #endif /* __compiler_common_stdint_h_ */
